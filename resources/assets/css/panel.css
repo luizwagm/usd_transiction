@@ -1,0 +1,342 @@
+:root{
+  --cor-tema: #4db6ac;
+  --cor-tema-dark: #00897b;
+}
+
+#top{
+  position: relative;
+  height: 80px;
+  background:var(--cor-tema);
+}
+
+#logo{
+
+
+}
+
+#logo_torcida{
+  margin-top: -20px;
+    height: 80px;
+}
+
+.titulos{
+  font-size: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+label{
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: 10px
+}
+
+i.compart{
+  font-size: 11px;
+  color: #666
+}
+
+.valor_ser_pago{
+  font-size: 34px;
+  color: var(--cor-tema);
+}
+
+.primeiro_pagamento{
+  font-size: 20px;
+  color: var(--cor-tema);
+}
+
+.div-space{
+  height: 30px;
+  width: 100%;
+}
+
+#botao_login{
+  
+}
+
+.login-home, .login-home i{
+  color: #fff;
+}
+
+.img-parceiros-home{
+  width: 75%;
+  height: 180px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  margin: 15px auto;
+}
+
+
+#banner{
+  position: relative;
+  height: 330px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center center;
+}
+
+#homePlanos{
+  position: relative;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 40px
+}
+
+.planoBox{
+  position: relative;
+  height: auto;
+  background: var(--cor-tema);
+  border-radius:5px;
+}
+
+.planoBox .header{
+  position: relative;
+  height: 100px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.planoBox .body{
+  width: 96%;
+  margin:0 auto;
+  min-height: 80px;
+  background:#fff;
+  font-size:13px;
+  letter-spacing: 2px;
+  padding: 5px 10px
+}
+
+.planoBox .footer{
+  position: relative;
+  height: 80px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+.planoBox .footer span{
+  font-size: 16px;
+  font-weight: 100;
+  display: block;
+}
+
+.planoBox .assinar{
+  width: 130px;
+  height: 35px;
+  padding: 5px 0;
+  cursor: pointer;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  background: var(--cor-tema);
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  margin-bottom: -30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.planoBox .assinar a{
+  color: #fff;
+  cursor: pointer;
+}
+
+.planoBox.ativo{
+  background: var(--cor-tema-dark);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color:#fff;
+}
+
+.planoBox.ativo .body{
+  color: #000
+}
+
+.planoBox.ativo .assinar{
+  background: var(--cor-tema-dark);
+  color:#fff;
+  box-shadow: 0 9px 15px 1px rgba(0,0,0,0.5);
+}
+
+.btn-mais-planos{
+  text-align: center;
+  border-radius: 3px;
+  background:var(--cor-tema);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 5px 0;
+  display: block;
+  margin-top: 30px;
+  color: #000;
+  font-weight: bold;
+  border-top:1px solid #e5e5e5;
+  border-left:1px solid #e5e5e5;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5)
+}
+
+.btn-mais-planos:hover{
+  text-decoration: none;
+  color:#000;
+}
+
+#parceirosBox .title{
+  position: relative;
+  height: 80px;
+  background:var(--cor-tema);
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 5px 0;
+}
+
+#parceirosBox .corpo-parceiros{
+  margin:20px 0;
+}
+
+#parceirosBox .corpo-parceiros .row{
+  margin-top:10px;
+  margin-bottom: 20px;
+}
+
+#redesSociaisBox{
+  position: relative;
+  height: 80px;
+  background:var(--cor-tema);
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+#redesSociaisBox a{
+  color:#000;
+  margin:0 10px;
+}
+
+#redesSociaisBox a:hover{
+  text-decoration: none
+}
+
+#redesSociaisBox i{
+  font-size: 60px
+}
+
+#areaRodape{
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 12px
+}
+
+#areaRodape h4{
+  margin-top: 0;
+  font-size: 20px
+}
+
+footer{
+  position: relative;
+  height: 80px;
+  background:var(--cor-tema);
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+footer .copyright{
+  font-size: 12px;
+  padding: 10px 0;
+}
+
+/**** area socio/restrito **/
+
+#bodyAdmin{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#bodyAdmin span{
+  padding: 5px 10px 8px 10px;
+}
+
+#bodyAdmin .titleAdmin{
+  text-align: center;
+  border:1px solid #ccc;
+  border-radius:3px;
+  padding:5px 0 10px 0;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#bodyAdmin .btn-salvar{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  float: right;
+}
+
+#bodyAdmin .tableDemonstracao{
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.centraliza-card{
+  position: absolute;
+  height: 30px;
+  top: 50%;
+  margin-top: -20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.btn-centraliza-card{
+  position: absolute;
+  height: 38px;
+  top: 50%;
+  margin-top: -20px;
+  right: 10px
+}
+
+.padding-20{
+  padding: 20px 0
+}
+
+#bodyAdmin h4{
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 20px
+}
+
+.topo-admin{
+  background: var(--cor-tema-dark);
+
+}
+
+.nav-tabs{
+  border-bottom: 0
+}
+
+.topo-admin a{
+  color: #fff
+}
+
+/**inicia**/
+
+.navbar-dark .navbar-nav .nav-link{
+  color: #000
+}
