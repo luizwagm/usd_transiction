@@ -103,6 +103,15 @@ class Dashboard extends CI_Controller {
 
 				if($efetuar > 0){
 					$this->session->set_flashdata('sucesso_transf', 1);
+
+					require_once('../resources/plugins/phpmailerOficial/PHPMailerAutoload.php');
+
+					$quem = $this->DashboardModel->getDadosId($this->session->socio_id_home);
+					$para = $this->DashboardModel->getDadosId($getBeneficiario[0]->_id);
+
+					self::enviarEmails($quem[0]->login,$quem[0]->nome,'Transferiu',date('d/m/Y H:i:s'),number_format($valor,2,',','.'));
+					self::enviarEmails($para[0]->login,$para[0]->nome,'Recebeu',date('d/m/Y H:i:s'),number_format($valor,2,',','.'));
+
 				}else{
 					$this->session->set_flashdata('sucesso_transf', 4);
 				}
@@ -115,6 +124,31 @@ class Dashboard extends CI_Controller {
 
 		return redirect(base_url('panel/index.php/Dashboard'), 'refresh');
 
+	}
+
+	/**
+		Enviar e-mails
+	*/
+	public function enviarEmails($email,$usuario,$transacao,$dataHora,$valor)
+	{
+
+		$mailer = new PHPMailer();
+		$mailer->IsSMTP();
+		$mailer->SMTPDebug = 1;
+		$mailer->Port = 587; //Indica a porta de conexão 
+		$mailer->Host = 'url-servidor';//Endereço do Host do SMTP 
+		$mailer->SMTPAuth = true; //define se haverá ou não autenticação 
+		$mailer->Username = 'email-suporte'; //Login de autenticação do SMTP
+		$mailer->Password = 'senha-suporte'; //Senha de autenticação do SMTP
+		$mailer->FromName = 'Suporte '; //Nome que será exibido
+		$mailer->From = 'email-suporte'; //Obrigatório ser a mesma caixa postal configurada no remetente do SMTP
+		$mailer->AddAddress($email,$usuario);
+		//Destinatários
+		$mailer->Subject = utf8_decode('Transação do sistema USD');
+		$mailer->Body = '<p>Olá '.$usuario.',</p>
+					<p>Você '.$transacao.' o valor de R$ '.$valor.' às '.$dataHora.'</p>';
+		$mailer->IsHTML(true);
+		$mailer->Send();
 	}
 
 	

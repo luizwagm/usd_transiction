@@ -11,6 +11,15 @@ class DashboardModel extends CI_Model {
 		return $resultado;
 	}
 
+	public function getDadosId($id)
+	{
+		$this->db->select('*');
+		$this->db->where('_id',$id);
+		$resultado = $this->db->get('cadastro')->result();
+		
+		return $resultado;
+	}
+
 	public function editDados($arr)
 	{
 		$this->db->where('_id',$this->session->socio_id_home);
