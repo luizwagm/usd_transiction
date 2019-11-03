@@ -65,7 +65,7 @@
 								<div class="row">
 									<div class="col-sm-12">
 										<label for="">Beneficiário</label>
-										<input type="text" placeholder="Pesquise pelo ID" name="beneficiario" id="beneficiario" class="form-control" required>
+										<input type="text" placeholder="Insira o ID do beneficiário" name="beneficiario" id="beneficiario" class="form-control" required>
 									</div>
 								</div>
 								<div class="row">
